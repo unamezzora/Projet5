@@ -1,0 +1,32 @@
+.card {
+    height: 340px;
+    width: 100%;
+    position: relative;
+    
+    @media (max-width: 768px) {
+        height: 255px;
+    }
+    
+    
+    .card__img {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+
+        @media (max-width: 768px) {
+            height: 255px;
+        }
+    }
+
+    .card__title {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: #FFFFFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        width: 50%;
+    }
+}

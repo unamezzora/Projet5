@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+    &__link {
+        margin-left: 30px;
+        font-family: Montserrat;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 500;
+        color: black;
+        @media (max-width: 768px) {
+            font-size: 12px;
+            }
+    }
+    
+    &__logo {
+        @media (max-width: 768px) {
+        height: 46.88px;
+        }
+    }
+
+    
+}

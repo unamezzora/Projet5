@@ -1,0 +1,51 @@
+$main-font-family: Montserrat;
+
+.banner {
+position: relative;
+border-radius: 25px;
+
+
+    &__img {
+        height: 223px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+
+        @media (max-width: 768px) {
+            height: 111px;
+            border-radius: 10px;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(6, 6, 6, 0.65);
+        height: 223px;
+        width: 100%;
+        border-radius: 25px;
+
+        @media (max-width: 768px) {
+            height: 111px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 82px 0;
+            font-family: $main-font-family;
+            font-size: 48px;
+            font-weight: 700;
+            color: #FFFFFF;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                text-align: left;
+                margin: 30px 20px;
+            }
+        }
+
+    }
+    
+}
