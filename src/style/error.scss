@@ -1,8 +1,9 @@
+@import '../index.scss';
+
 .error {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Montserrat;
     margin-bottom: 100px;
     gap: 100px;
 
@@ -16,7 +17,7 @@
 
     &__title {
         text-align: center;
-        color: #FF6060;
+        color: $principal;
         font-size: 36px;
 
         @media (max-width: 768px) {
@@ -25,7 +26,7 @@
     }
     
     &__link {
-        color: #000000;
+        color: $noir;
         font-size: 18px;
 
         @media (max-width: 768px) {

@@ -1,6 +1,9 @@
+@import '../index.scss';
+
 .footer {
+    margin: 0;
     height: 209px;
-    background-color: #000000;
+    background-color: $noir;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -13,10 +16,9 @@
     }
 
     &__title {
-        color: #FFFFFF;
+        color: $blanc;
         font-size: 24px;
         font-weight: 500;
-        font-family: Montserrat;
         text-align: center;
         @media (max-width: 768px) {
             font-size: 12px;

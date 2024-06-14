@@ -1,0 +1,40 @@
+@import '../index.scss';
+
+.apropos {
+    position: relative;
+    margin: $margin_page;
+    @media (max-width: 768px) {
+            margin: $margin_page_mobil;
+        }
+    &__banner {
+        @include banner;
+        &--Sombre {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(6, 6, 6, 0.3);
+            @include banner;
+        }
+        
+    }
+ 
+    &__collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        &__btn {
+            height: 52px;
+            width: 1023px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: $principal;
+            color: $blanc;
+            text-align: left;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: $principal-font-family;
+        }
+    }
+}

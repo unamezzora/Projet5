@@ -1,25 +1,31 @@
+@import '../index.scss';
+
 .annonces {
+    margin: $margin_page;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    overflow: hidden;
-    height: 730px;
     border-radius: 25px;
     gap: 50px;
     padding: 50px;
-    background-color: #F6F6F6;
-    
-    margin: 40px 0;
+    background-color: $gris;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 3fr;
-        height: 805px;
-        margin: 10px 0;
+        margin: $margin_page_mobil;
         padding: 0;
         gap: 15px;
-        background-color: #FFFFFF;
+        background-color: $blanc;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
+
+    
         
 
     

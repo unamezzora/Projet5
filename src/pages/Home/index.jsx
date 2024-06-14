@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../../components/Card";
 import '../../style/home.scss';
+import Banner from "../../components/Banner"
 
 const Home = ({ jsonPath = '/data.json' }) => {
   const [data, setData] = useState([]);
@@ -12,6 +13,8 @@ const Home = ({ jsonPath = '/data.json' }) => {
   }, [jsonPath]);
 
   return (
+    <div>
+      <Banner />
       <div className="annonces">
         {data.map(logement => (
           <Card
@@ -21,6 +24,9 @@ const Home = ({ jsonPath = '/data.json' }) => {
           />
         ))}
       </div>
+    </div>
+    
+      
 
   ); 
 }

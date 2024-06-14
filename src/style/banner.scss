@@ -1,49 +1,43 @@
-$main-font-family: Montserrat;
+@import '../index.scss';
 
 .banner {
 position: relative;
 border-radius: 25px;
+margin: $margin_page;
 
+@media (max-width: 768px) {
+    margin: $margin_page_mobil;
+}
 
     &__img {
-        height: 223px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 25px;
-
-        @media (max-width: 768px) {
-            height: 111px;
-            border-radius: 10px;
-        }
+        @include banner;
     }
 
     &__title {
         position: absolute;
         top: 0;
         left: 0;
-        background: rgba(6, 6, 6, 0.65);
-        height: 223px;
-        width: 100%;
-        border-radius: 25px;
-
-        @media (max-width: 768px) {
-            height: 111px;
-            border-radius: 10px;
-        }
+        background: rgba(6, 6, 6, 0.60);
+        @include banner;
 
         h1 {
             text-align: center;
             margin: 82px 0;
-            font-family: $main-font-family;
             font-size: 48px;
             font-weight: 700;
-            color: #FFFFFF;
+            color: $blanc;
+
+            @media (max-width: 1024px) {
+                font-size: 36px;
+            }
 
             @media (max-width: 768px) {
                 font-size: 24px;
                 text-align: left;
                 margin: 30px 20px;
             }
+
+            
         }
 
     }

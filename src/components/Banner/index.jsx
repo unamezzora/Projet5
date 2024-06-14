@@ -1,4 +1,5 @@
 import imageBanner from '../../assets/imageBanner.svg'
+//import imageBanner from '/imageBanner.svg'
 import '../../style/banner.scss'
 
 function Banner() {

@@ -1,0 +1,43 @@
+
+
+
+
+
+//Variables
+
+$principal: #FF6060;
+$blanc: #FFFFFF;
+$gris: #F6F6F6;
+$noir: #000000;
+
+$principal-font-family: Montserrat;
+$margin_page: 0px 100px;
+$padding_page: 0px 100px;
+$padding_page_mobil: 0px 10px;
+$margin_page_mobil: 0px 10px;
+
+//Mixins
+
+@mixin banner{
+    height: 223px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+
+    @media (max-width: 768px) {
+        height: 111px;
+        border-radius: 10px;
+    }
+}
+
+body {
+    font-family: $principal-font-family;
+
+}
+
+h1 {
+    font-size: 24px;
+    font-family: $principal-font-family;
+    font-weight: 700;
+
+}
