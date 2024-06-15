@@ -31,6 +31,9 @@ $margin_page_mobil: 0px 10px;
 }
 
 body {
+    min-width: 320px;
+    max-width: 1440px;
+    margin: auto;
     font-family: $principal-font-family;
 
 }

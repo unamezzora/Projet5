@@ -7,22 +7,29 @@ function Collapse () {
 
     return isOpen ? (
         <div className="collapse">
-            <button className="collapse__btn" onClick={() => setIsOpen(false)}>
-                <h1>Fiabilité</h1> 
-                <img className='collapse__btn__ferme'  src={ferme} alt="logo" />
-            </button>
+            <div className="collapse__title">
+                <h1>Fiabilité</h1>
+                <button className="collapse__title__btn" onClick={() => setIsOpen(false)}>
+                    <svg className="collapse__title__btn--ouvert" viewBox="-6 0 36 15">
+                        <path stroke="none"  fill="#FFFFFF" viewBox="0 0 10 16" d="m13.2103,13.8522c-0.6694,0.6694 -1.7565,0.6694 -2.426,0l-10.28224,-10.28232c-0.66942,-0.66942 -0.66942,-1.75656 0,-2.42598c0.66942,-0.66942 1.75656,-0.66942 2.42598,0l9.07196,9.072l9.072,-9.06664c0.6694,-0.66942 1.7565,-0.66942 2.4259,0c0.6695,0.66942 0.6695,1.75656 0,2.42597l-10.2822,10.28227l-0.0054,-0.0053z" />
+                    </svg>     
+                </button>
+            </div>
             <p className="collapse__contenu">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
         </div>
     ) : (
-        <button className="collapse__btn" onClick={() => setIsOpen(true)}>
-            <h1>Fiabilité</h1>
-            <svg className="collapse__btn__icon" height="30" width="30">
-                <path stroke="none"  fill="#FFFFFF" d="m15.34013,10.43154c0.64151,-0.66942 1.68331,-0.66942 2.32492,0l9.85377,10.28226c0.6416,0.6694 0.6416,1.7566 0,2.426c-0.64151,0.6694 -1.68331,0.6694 -2.32482,0l-8.694,-9.07198l-8.69396,9.06658c-0.64153,0.6695 -1.68337,0.6695 -2.3249,0c-0.64153,-0.6694 -0.64153,-1.7565 0,-2.4259l9.85381,-10.28232l0.00517,0.00536z" />
-
-                //d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z0 0 L25 50 L20 20 " d="M30 60 L45 35 L60 60"
-
-            </svg>
-        </button>
+        <div className="collapse">
+            <div className="collapse__title">
+                <h1>Fiabilité</h1>
+                <button className="collapse__title__btn" onClick={() => setIsOpen(true)}>
+                    <svg className="collapse__title__btn--ferme"
+                    viewBox="-6 0 36 15">
+                        <path stroke="none"  fill="#FFFFFF" d="m13.2103,13.8522c-0.6694,0.6694 -1.7565,0.6694 -2.426,0l-10.28224,-10.28232c-0.66942,-0.66942 -0.66942,-1.75656 0,-2.42598c0.66942,-0.66942 1.75656,-0.66942 2.42598,0l9.07196,9.072l9.072,-9.06664c0.6694,-0.66942 1.7565,-0.66942 2.4259,0c0.6695,0.66942 0.6695,1.75656 0,2.42597l-10.2822,10.28227l-0.0054,-0.0053z" />
+                    </svg>
+                </button>
+            </div>    
+        </div>
+        
     )
 }
 
