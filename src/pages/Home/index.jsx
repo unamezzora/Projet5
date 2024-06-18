@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "../../components/Card";
 import '../../style/home.scss';
 import Banner from "../../components/Banner"
+import { Link } from "react-router-dom";
 
 const Home = ({ jsonPath = '/data.json' }) => {
   const [data, setData] = useState([]);
@@ -17,46 +18,18 @@ const Home = ({ jsonPath = '/data.json' }) => {
       <Banner />
       <div className="annonces">
         {data.map(logement => (
-          <Card
-          key={`${logement.id}`}
-          title={logement.title}
-          picture={logement.cover}
+          <Link key={`${logement.id}`} to={`/logement/${logement.id}`}>
+            <Card
+            title={logement.title}
+            picture={logement.cover}
           />
+          </Link>
+          
         ))}
       </div>
     </div>
-    
-      
-
   ); 
 }
 
 
 export default Home;
-/*
-function Home() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch('/data.json')
-    .then(response => response.json())
-    .then(data => setData(data));
-  }, []);
-
-  return (
-      <div>
-        {data.map(logement => (
-          <Card
-          key={`${logement.id}`}
-          title={logement.title}
-          picture={logement.cover}
-          />
-        ))}
-      </div>
-
-  ); 
-}
-
-
-export default Home;
-*/

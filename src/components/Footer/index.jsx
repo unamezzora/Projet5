@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import logoNoir from '../../assets/LOGO_bl.svg'
 import '../../style/footer.scss'
 

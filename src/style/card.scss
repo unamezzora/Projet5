@@ -4,11 +4,16 @@
     height: 340px;
     width: 100%;
     position: relative;
+    transition: transform 400ms;
+    border-radius: 10px;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
     
     @media (max-width: 768px) {
         height: 255px;
     }
-    
     
     .card__img {
         height: 340px;
@@ -40,6 +45,5 @@
             box-sizing: border-box;
      
         }
-    
     }
 }

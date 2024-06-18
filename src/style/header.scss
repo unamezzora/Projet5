@@ -23,20 +23,11 @@
         @media (max-width: 768px) {
             font-size: 12px;
             }
-
     }
     
     &__logo {
         @media (max-width: 768px) {
         height: 46.88px;
         }
-    }
-
-    
-}
-.navbar__link--selected {
-    color: red;
-}
-.tot {
-    color: aqua;
+    } 
 }

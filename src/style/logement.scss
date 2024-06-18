@@ -1,0 +1,23 @@
+@import '../index.scss';
+
+.logement {
+    margin: $margin_page;
+
+    &__title {
+        
+        & h1 {
+            color: $principal;
+            font-size: 36px;
+            font-weight: 500;
+        }
+        & p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+    }
+
+    &__host {
+        
+    }
+}

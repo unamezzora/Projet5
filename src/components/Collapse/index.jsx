@@ -34,8 +34,8 @@ function Collapse ({ collapseTitle, collapseContenu }) {
 }
 
 Collapse.propType = {
-    collapseTitle: PropTypes.string,
-    collapseContenu: PropTypes.string,
+    collapseTitle: PropTypes.string.isRequired,
+    collapseContenu: PropTypes.string.isRequired,
 }
 
  export default Collapse
