@@ -3,6 +3,7 @@ import '../../style/logement.scss';
 import { useParams } from "react-router-dom";
 import Collapse from "../../components/Collapse";
 import Slideshow from "../../components/Slideshow";
+import PropTypes from 'prop-types'
 
 
 function Logement() {
@@ -33,35 +34,40 @@ function Logement() {
                                 <Slideshow
                                 data={logementData}
                                 />
-                           
                             </div>
-                            <div className="logement__title">
-                                <h1>{logementData.title}</h1>
-                                <p>{logementData.location}</p>
-                            </div>
-                            {logementData.host && (
-                                <div className="logement__host">
-                                    <p>{logementData.host.name} </p>
-                                    <img src={logementData.host.picture} alt={logementData.host.name} />
+                            <div className="logement__contenu">
+                                <div className="logement__contenu__title">
+                                    <h1>{logementData.title}</h1>
+                                    <p>{logementData.location}</p>
                                 </div>
-                                )}
-                            <div className="logement__tags">
-                                {logementData.tags}
-                            </div>
-                            <div className="logement__rating">
-                             {logementData.rating}
-                            </div>
-                            <div className="logement__collapse">
-                                <Collapse 
-                                collapseTitle="Description"
-                                collapseContenu={logementData.description}
-                                />
-                            </div>
-                            <div className="logement__collapse">
-                                <Collapse
-                                collapseTitle="Équipements"
-                                collapseContenu={logementData.equipments}
-                                />
+                                 <div className="logement__contenu__tags">
+                                 {logementData.tags}
+                                </div>
+                                <div className="logement__contenu__supp">    
+                                    {logementData.host && (
+                                        <div className="logement__contenu__supp__host">
+                                            <p>{logementData.host.name} </p>
+                                            <img src={logementData.host.picture} alt={logementData.host.name} />
+                                        </div>
+                                    )}
+                                    <div className="logement__contenu__supp__rating">
+                                    {logementData.rating}
+                                    </div>
+                                </div>
+                            </div>    
+                            <div className="logement__description">
+                                <div className="logement__description_collapse">
+                                    <Collapse 
+                                    collapseTitle="Description"
+                                    collapseContenu={logementData.description}
+                                    />
+                                </div>
+                                <div className="logement__description__collapse">
+                                    <Collapse
+                                    collapseTitle="Équipements"
+                                    collapseContenu={logementData.equipments}
+                                    />
+                                </div>
                             </div>
                         </div>
 
@@ -73,6 +79,16 @@ function Logement() {
             
 
         )
+}
+Logement.propTypes = {
+    pictures: PropTypes.array.isRequired,
+    title: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+    host: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    equipments: PropTypes.string.isRequired,
 }
 
 export default Logement

@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import '../../style/card.scss'
-import { useParams } from 'react-router-dom'
 
 function Card({ title, picture }) {
 
