@@ -21,4 +21,13 @@
             right: 0;
         }
     }
+    &__num {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 25px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $blanc;
+    }
 }
