@@ -1,0 +1,49 @@
+@import '../../index.scss';
+
+.card {
+    height: 340px;
+    width: 100%;
+    position: relative;
+    transition: transform 400ms;
+    border-radius: 10px;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    
+    @media (max-width: 768px) {
+        height: 255px;
+    }
+    
+    .card__img {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        @media (max-width: 768px) {
+            height: 255px;
+        }
+    }
+
+    .card__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+        color: $blanc;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 10px;
+        & p {
+            height: 100%;
+            width: 70%;
+            align-content: end;
+            padding: 0 0 20px 10px;
+            margin: 0;
+            box-sizing: border-box;
+     
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@import '../../index.scss';
+
+
+
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+    &__title {
+        display: grid;
+        grid-template-columns: auto 76px;
+        width: 100%;
+        background-color: $principal;
+        color: $blanc;
+        border: 0px;
+        border-radius: 5px;
+        padding: 0;
+        & h1 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 10px 20px;
+            @media (max-width: 1024px) {
+                font-size: 18px;
+            }
+            @media (max-width: 768px) {
+                font-size: 13px;
+            }
+        }
+        &__btn {
+            background-color: $principal;
+            border-radius: 5px;
+            border: 0px;
+            padding: 1px 20px;
+            @media (max-width: 768px) {
+                padding-left: 32px;
+            }
+            &--ferme {
+                transform: rotate(180deg);
+                transition: transform 300ms ease-in-out;
+            }
+            &--ouvert {
+                transform: rotate(0deg);
+                transition: transform 300ms ease-in-out;
+            }
+            &:active {
+                & > .collapse__title__btn--ferme {
+                    transform: rotate(180deg);
+                }
+                & > .collapse__title__btn--ouvert {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+
+    &__contenu {
+        background-color: $gris;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 0;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+        &--ferme {
+            display: none;
+        }
+    }
+    
+}
