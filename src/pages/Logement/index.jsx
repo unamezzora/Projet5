@@ -15,7 +15,6 @@ function Logement() {
       .then((jsonResponse) => {
         const logement = jsonResponse.find((item) => item.id === logementId)
         setLogementData(logement)
-        console.log(jsonResponse[0])
       })
   }, [logementId])
 
@@ -61,7 +60,11 @@ function Logement() {
             <div className="logement__description__collapse">
               <Collapse
                 collapseTitle="Équipements"
-                collapseContenu={logementData.equipments}
+                collapseContenu={logementData.equipments.map(
+                  (equipment, index) => (
+                    <div key={`${equipment}-${index}`}>{equipment}</div>
+                  )
+                )}
               />
             </div>
           </div>
@@ -72,7 +75,7 @@ function Logement() {
     </div>
   )
 }
-Logement.propTypes = {
+/*Logement.propTypes = {
   pictures: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
@@ -82,5 +85,5 @@ Logement.propTypes = {
   description: PropTypes.string.isRequired,
   equipments: PropTypes.string.isRequired,
 }
-
+*/
 export default Logement

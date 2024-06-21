@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
-import '../../style/slideshow.scss'
+import './slideshow.scss'
 
 function Slideshow({ data }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -70,9 +70,11 @@ function Slideshow({ data }) {
     </div>
   )
 }
+/*
 Slideshow.propTypes = {
   pictures: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
 }
+  */
 
 export default Slideshow
