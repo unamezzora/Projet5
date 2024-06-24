@@ -27,14 +27,12 @@ function Slideshow({ data }) {
         alt={data.title}
       />
       {data.pictures.length > 1 ? (
-        <div>
+        <div className="slideshow__nav">
           <button
-            className="slideshow__btn slideshow__btn--prev"
+            className="slideshow__nav__btn slideshow__nav__btn--prev"
             onClick={prevPicture}
           >
             <svg
-              width="96"
-              height="120"
               viewBox="0 0 96 120"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -46,13 +44,11 @@ function Slideshow({ data }) {
             </svg>
           </button>
           <button
-            className="slideshow__btn slideshow__btn--next"
+            className="slideshow__nav__btn slideshow__nav__btn--next"
             onClick={nextPicture}
           >
             <svg
-              width="96"
-              height="121"
-              viewBox="0 0 96 121"
+              viewBox="0 0 96 120"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
