@@ -3,6 +3,7 @@ import '../../style/logement.scss'
 import { useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import Slideshow from '../../components/Slideshow'
+import Rating from '../../components/Rating'
 import PropTypes from 'prop-types'
 
 function Logement() {
@@ -46,7 +47,7 @@ function Logement() {
                 </div>
               )}
               <div className="logement__contenu__supp__rating">
-                {logementData.rating}
+                <Rating rating={logementData.rating} />
               </div>
             </div>
           </div>

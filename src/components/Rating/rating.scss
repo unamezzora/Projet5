@@ -1,0 +1,13 @@
+.rating {
+    display: flex;
+    justify-content: end;
+    margin: 20px 0;
+    & svg {
+        @media (max-width: 768px) {
+        height: 19px;
+    }
+    }
+
+    
+    
+}
