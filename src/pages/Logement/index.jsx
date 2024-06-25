@@ -4,19 +4,26 @@ import { useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import Slideshow from '../../components/Slideshow'
 import Rating from '../../components/Rating'
+import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 function Logement() {
   const { id: logementId } = useParams()
   const [logementData, setLogementData] = useState(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('/data.json')
-      .then((response) => response.json())
-      .then((jsonResponse) => {
-        const logement = jsonResponse.find((item) => item.id === logementId)
-        setLogementData(logement)
-      })
+    if (logementId) {
+      fetch('/data.json')
+        .then((response) => response.json())
+        .then((jsonResponse) => {
+          const logement = jsonResponse.find((item) => item.id === logementId)
+          if (!logement) {
+            navigate('/error')
+          }
+          setLogementData(logement)
+        })
+    }
   }, [logementId])
 
   return (
