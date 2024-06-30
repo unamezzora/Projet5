@@ -18,13 +18,18 @@ const Home = ({ jsonPath = '/data.json' }) => {
     <div>
       <Banner
         imageBanner={imageBanner}
-        titleBanner={'Chez vous, partout et ailleurs'}
+        titleBanner={
+          <>
+            Chez vous, <span>partout et ailleurs</span>
+          </>
+        }
         altBanner={'Un littoral rocheux'}
+        className="banner__title-home"
       />
       <div className="annonces">
         {data.map((logement) => (
           <Link key={`${logement.id}`} to={`/logement/${logement.id}`}>
-            <Card title={logement.title} picture={logement.cover} />
+            <Card logement={logement} />
           </Link>
         ))}
       </div>

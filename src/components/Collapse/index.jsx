@@ -26,9 +26,9 @@ function Collapse({ collapseTitle, collapseContenu }) {
           </svg>
         </button>
       </div>
-      <p className={`collapse__contenu${isOpen ? '' : '--ferme'}`}>
+      <div className={`collapse__contenu${isOpen ? '' : '--ferme'}`}>
         {collapseContenu}
-      </p>
+      </div>
     </div>
   )
 }

@@ -7,7 +7,7 @@ function Error() {
     <div className="error">
       <img className="error__img" src={erreur404} alt="404" />
       <div className="error__title">
-        <p>Oups! La page que vous demandez n'existe pas.</p>
+        Oups! La page que <span>vous demandez n'existe pas.</span>
       </div>
       <Link className="error__link" to="/">
         Retourner sur la page d’accueil

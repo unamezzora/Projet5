@@ -2,10 +2,6 @@
 
 .apropos {
     position: relative;
-    
-    @media (max-width: 768px) {
-            margin: $margin_page_mobil;
-        }
    
     &__collapse {
         display: flex;
@@ -15,12 +11,14 @@
         padding: 30px;
         margin: 0 150px;
         @media (max-width: 1024px) {
-            margin: 0;
+            margin: 0 100px;
+        
         
         }
         @media (max-width: 768px) {
             padding: 20px 0;
             gap: 20px;
+            margin: $margin_page_mobil;
         }
         &__btn {
             height: 52px;

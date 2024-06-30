@@ -19,12 +19,12 @@ function Logement() {
         .then((jsonResponse) => {
           const logement = jsonResponse.find((item) => item.id === logementId)
           if (!logement) {
-            navigate('/error')
+            navigate('/*')
           }
           setLogementData(logement)
         })
     }
-  }, [logementId])
+  }, [logementId, navigate])
 
   return (
     <div>
@@ -83,15 +83,21 @@ function Logement() {
     </div>
   )
 }
-/*Logement.propTypes = {
-  pictures: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  tags: PropTypes.string.isRequired,
-  host: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-  equipments: PropTypes.string.isRequired,
+Logement.propTypes = {
+  logementData: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+    description: PropTypes.string.isRequired,
+    host: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      picture: PropTypes.string.isRequired,
+    }).isRequired,
+    rating: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    equipments: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }),
 }
-*/
+
 export default Logement

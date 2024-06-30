@@ -19,7 +19,7 @@ width: auto;
         position: absolute;
         top: 0;
         left: 0;
-        background: rgba(6, 6, 6, 0.60);
+        background: rgba(6, 6, 6, 0.30);
         @include banner;
 
         h1 {
@@ -28,6 +28,7 @@ width: auto;
             font-size: 48px;
             font-weight: 700;
             color: $blanc;
+           
 
             @media (max-width: 1024px) {
                 font-size: 36px;
@@ -37,7 +38,13 @@ width: auto;
                 font-size: 24px;
                 text-align: left;
                 margin: 30px 20px;
+                display: flex;
+                flex-direction: column;
             }
         }
     }
+}
+
+.banner__title-home {
+    background: rgba(6, 6, 6, 0.60);
 }
