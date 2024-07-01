@@ -1,0 +1,23 @@
+@import '../index.scss';
+
+.loader {
+padding: 10px;
+  border: 6px solid $principal;
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  animation: rotate 1s infinite linear;
+  height: 0;
+  width: 0;
+  margin: 100px auto;
+}
+
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+ 

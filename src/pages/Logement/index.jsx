@@ -4,16 +4,19 @@ import { useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import Slideshow from '../../components/Slideshow'
 import Rating from '../../components/Rating'
+import Loader from '../../utils/Loader'
 import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 function Logement() {
   const { id: logementId } = useParams()
   const [logementData, setLogementData] = useState(null)
+  const [isDataLoading, setDataLoading] = useState(true)
   const navigate = useNavigate()
 
   useEffect(() => {
     if (logementId) {
+      setDataLoading(true)
       fetch('/data.json')
         .then((response) => response.json())
         .then((jsonResponse) => {
@@ -22,13 +25,16 @@ function Logement() {
             navigate('/*')
           }
           setLogementData(logement)
+          setDataLoading(false)
         })
     }
   }, [logementId, navigate])
 
   return (
     <div>
-      {logementData ? (
+      {isDataLoading ? (
+        <Loader />
+      ) : (
         <div className="logement">
           <div className="logement__img">
             <Slideshow data={logementData} />
@@ -77,8 +83,6 @@ function Logement() {
             </div>
           </div>
         </div>
-      ) : (
-        <p>Loading...</p>
       )}
     </div>
   )
