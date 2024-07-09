@@ -2,6 +2,7 @@ import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
 import '../../style/about.scss'
 import imageBanner from '../../assets/imageBanner2.svg'
+import { useId } from 'react'
 
 const aPropos = [
   {
@@ -27,6 +28,7 @@ const aPropos = [
 ]
 
 function About() {
+  const id = useId()
   return (
     <div className="apropos">
       <Banner
@@ -37,7 +39,7 @@ function About() {
       <div className="apropos__collapse">
         {aPropos.map((valeur, index) => (
           <Collapse
-            key={`${aPropos.collapseTitle}-${index}`}
+            key={`${id}-${index}`}
             collapseTitle={valeur.collapseTitle}
             collapseContenu={valeur.collapseContenu}
           />

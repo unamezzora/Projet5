@@ -1,4 +1,5 @@
 import './rating.scss'
+import PropTypes from 'prop-types'
 
 function Rating({ rating }) {
   return (
@@ -21,6 +22,10 @@ function Rating({ rating }) {
       )}
     </div>
   )
+}
+
+Rating.propTypes = {
+  rating: PropTypes.string.isRequired,
 }
 
 export default Rating

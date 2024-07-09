@@ -66,11 +66,12 @@ function Slideshow({ data }) {
     </div>
   )
 }
-/*
+
 Slideshow.propTypes = {
-  pictures: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired,
+  data: PropTypes.shape({
+    pictures: PropTypes.array.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
 }
-  */
 
 export default Slideshow
